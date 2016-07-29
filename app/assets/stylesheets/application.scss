@@ -3,11 +3,17 @@
 @import "select2";
 @import "select2-bootstrap";
 @import "login";
+@import "my_account";
+@import "buttons";
 
 .alert {
-  text-align: center
+  text-align: center;
 }
 
 h2 {
-  text-align: center
+  text-align: center;
+}
+
+h3 {
+  text-align: center;
 }
