@@ -20,4 +20,16 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  back: Back
+  cancel_account: Cancel my account
+  current_password_explanation: (we need your current password to confirm your changes)
+  edit_user: Moje konto
+  fail: Something went wrong
+  leave_blank: (leave blank if you don't want to change it)
+  logout: Log out
+  my_account: My account
+  my_fields: My fields
+  success: Added successfully
+  unhappy: Unhappy?
+  update: Update
+  you_sure: Are you sure?
