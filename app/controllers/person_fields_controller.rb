@@ -9,7 +9,7 @@ class PersonFieldsController < ApplicationController
     if @field.save
       flash[:success] = I18n.t(:success)
     else
-      flash[:error] = I18n.t(:fail)
+      flash[:error] = @field.errors.full_messages.join(' ,')
     end
     redirect_to new_person_field_path
   end

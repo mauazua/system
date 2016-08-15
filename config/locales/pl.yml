@@ -1,7 +1,15 @@
 pl:
   activerecord:
+    errors:
+      models:
+        person_field:
+          attributes:
+            field:
+              taken: została już wybrana
     models:
       user: Użytkownik
+      field: Dziedzina
+      personfield: Dziedzina
     attributes:
       user:
         email: E-mail

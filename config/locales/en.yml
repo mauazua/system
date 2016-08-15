@@ -20,6 +20,16 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
+  activerecord:
+    errors:
+      models:
+        person_fields:
+          attributes:
+            field:
+              taken: was already chosen
+    models:
+      user: Użytkownik
+      field: Dziedzina
   back: Back
   cancel_account: Cancel my account
   current_password_explanation: (we need your current password to confirm your changes)
