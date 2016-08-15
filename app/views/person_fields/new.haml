@@ -1,0 +1,13 @@
+- content_for :page_title do
+  = "Dziedziny"
+%div
+  - @selected_fields.each do |field|
+    %div= field.name
+= form_for @field, html: { multipart: true } do |f|
+  %div{'data-hook' => 'admin_article_form_fields'}
+    .row
+      .col-md-8{'data-hook' => 'admin_article_form_left'}
+        %div{'data-hook' => 'admin_article_form_author'}
+          = f.label :field, 'Wybierz nową dziedzinę'
+          = f.collection_select(:field_id, Field.all, :id, :name, { include_blank: true }, { class: 'select2' })
+    = f.submit

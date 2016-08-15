@@ -3,4 +3,5 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :person_fields, as: :fieldable
+  has_many :fields, through: :person_fields
 end
