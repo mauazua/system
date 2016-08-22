@@ -1,5 +1,6 @@
 class PersonFieldsController < ApplicationController
-  def new
+
+  def index
     @selected_fields = current_user.fields
     @field = PersonField.new
   end
@@ -11,7 +12,7 @@ class PersonFieldsController < ApplicationController
     else
       flash[:error] = @field.errors.full_messages.join(' ,')
     end
-    redirect_to new_person_field_path
+    redirect_to person_fields_path
   end
 
   private
