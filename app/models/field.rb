@@ -1,3 +1,3 @@
 class Field < ActiveRecord::Base
-  # belongs_to user_field
+  validates :name, presence: true
 end
