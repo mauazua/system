@@ -1,8 +1,10 @@
 - content_for :page_title do
   = "Dziedziny"
 %div
-  - @selected_fields.each do |field|
-    %div= field.name
+  %div.user-fields
+    - @selected_fields.each do |field|
+      %span.field-name
+        = field.name
 = form_for @field, html: { multipart: true } do |f|
   %div{'data-hook' => 'admin_article_form_fields'}
     .row
