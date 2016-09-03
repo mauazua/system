@@ -11,12 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160830211510) do
+ActiveRecord::Schema.define(version: 20160903135740) do
 
   create_table "fields", force: :cascade do |t|
     t.string  "name"
     t.integer "parent_id"
+    t.integer "taxonomy_id"
   end
+
+  add_index "fields", ["taxonomy_id"], name: "index_fields_on_taxonomy_id"
 
   create_table "person_fields", force: :cascade do |t|
     t.integer "fieldable_id"
@@ -26,6 +29,12 @@ ActiveRecord::Schema.define(version: 20160830211510) do
 
   add_index "person_fields", ["field_id"], name: "index_person_fields_on_field_id"
   add_index "person_fields", ["fieldable_type", "fieldable_id"], name: "index_person_fields_on_fieldable_type_and_fieldable_id"
+
+  create_table "taxonomies", force: :cascade do |t|
+    t.string   "name",       null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "teachers", force: :cascade do |t|
     t.string "email"
