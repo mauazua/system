@@ -5,3 +5,4 @@
         %li= link_to I18n.t(:logout), destroy_user_session_path, method: :delete if current_user
         %li= link_to I18n.t(:my_account), edit_user_registration_path
         %li= link_to I18n.t(:my_fields), person_fields_path
+        %li= link_to I18n.t(:teachers), teacher_searches_path

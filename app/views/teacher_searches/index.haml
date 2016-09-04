@@ -1,0 +1,7 @@
+%div
+  %div.user-fields
+    - @result.each do |row|
+      - row.map do |k, v|
+        %span
+          = "#{k}: #{v}"
+          %br
