@@ -6,7 +6,7 @@ class TeacherSearchService
 
   def result
     teacher_fields.group_by(&:field).map do |field, t_fields|
-      { field.name => t_fields.map{|f| f.fieldable.full_name}.join(', ') }
+      { field.name => t_fields.sort_by(&:score).reverse.map{|f| f.fieldable.full_name + f.score.to_s}.join(', ') }
     end
   end
 
@@ -17,7 +17,7 @@ class TeacherSearchService
   end
 
   def teacher_fields
-    PersonField.includes(:field).where(field_id: fields_ids, fieldable_id: teachers.pluck(:id))
+    PersonField.includes(:field).where(field_id: fields_ids, fieldable: teachers)
   end
 
   def teachers
