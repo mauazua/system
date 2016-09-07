@@ -16,4 +16,9 @@ Teacher.all.each do |teacher|
       teacher.fields << field unless teacher.fields.include?(field)
     end
   end
+
+  teacher.person_fields.map do |pf|
+    value = (1..50).to_a.sample
+    pf.update_attribute(:score, value)
+  end
 end
