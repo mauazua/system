@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160903135740) do
+ActiveRecord::Schema.define(version: 20160904173254) do
 
   create_table "fields", force: :cascade do |t|
     t.string  "name"
@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 20160903135740) do
     t.integer "fieldable_id"
     t.string  "fieldable_type"
     t.integer "field_id"
+    t.integer "score",          default: 0
   end
 
   add_index "person_fields", ["field_id"], name: "index_person_fields_on_field_id"
