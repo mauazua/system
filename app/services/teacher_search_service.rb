@@ -6,7 +6,7 @@ class TeacherSearchService
 
   def result
     teacher_fields.group_by(&:field).map do |field, t_fields|
-      { field.name => t_fields.sort_by(&:score).reverse.map{|f| f.fieldable.full_name + f.score.to_s}.join(', ') }
+      { field.name => t_fields.sort_by(&:score).reverse.map{ |f| f.fieldable.full_name } }
     end
   end
 

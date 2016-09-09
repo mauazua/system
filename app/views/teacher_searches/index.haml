@@ -1,7 +1,13 @@
 %div
+  - if current_user.choice
+    %div.user-fields
+      = current_user.choice.teacher.full_name
   %div.user-fields
     - @result.each do |row|
       - row.map do |k, v|
-        %span
-          = "#{k}: #{v}"
-          %br
+        %div
+          = "#{k}"
+          %ul
+            - v.each do |name|
+              %li
+                = link_to name, choices_path(name: name), method: :post, data: { confirm: "Foo?" }

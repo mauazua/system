@@ -14,8 +14,10 @@
 ActiveRecord::Schema.define(version: 20160907151927) do
 
   create_table "choices", force: :cascade do |t|
-    t.integer "user_id"
-    t.integer "teacher_id"
+    t.integer  "user_id"
+    t.integer  "teacher_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "choices", ["teacher_id"], name: "index_choices_on_teacher_id"
