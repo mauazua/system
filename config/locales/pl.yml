@@ -21,6 +21,7 @@ pl:
   current_password_explanation: (potrzebujemy aktualnego hasła, żeby zatwierdzić zmiany)
 
   fail: Coś poszło nie tak
+  hello_you: Witaj, %{email}
   leave_blank: (Pozostaw pole puste, jeśli nie chcesz zmieniać hasła)
   logout: Wyloguj
   my_account: Moje konto
@@ -29,7 +30,7 @@ pl:
   teachers: Promotorzy
   unhappy: Niezadowolony?
   update: Zatwierdź
-  you_sure: Are you sure?
+  you_sure: Jesteś pewien?
 
   devise:
     confirmations:

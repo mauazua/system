@@ -35,6 +35,7 @@ en:
   current_password_explanation: (we need your current password to confirm your changes)
   edit_user: Moje konto
   fail: Something went wrong
+  hello_you: Hello, %{email}
   leave_blank: (leave blank if you don't want to change it)
   logout: Log out
   my_account: My account

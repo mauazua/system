@@ -1,13 +1,17 @@
 %div
   - if current_user.choice
     %div.user-fields
+      = "Wybrany promotor:"
       = current_user.choice.teacher.full_name
   %div.user-fields
     - @result.each do |row|
       - row.map do |k, v|
-        %div
+        %div.strong-text
           = "#{k}"
-          %ul
-            - v.each do |name|
-              %li
-                = link_to name, choices_path(name: name), method: :post, data: { confirm: "Foo?" }
+        %ul.no-bullets
+          - v.each do |name|
+            %li
+              - unless current_user.choice
+                = link_to name, choices_path(name: name), method: :post, data: { confirm: I18n.t(:you_sure) }
+              - else
+                = name
