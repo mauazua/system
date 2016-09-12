@@ -1,12 +1,12 @@
-%div
+%div.bordered.centered.half-width
   - if current_user.choice
-    %div.user-fields
+    %p.padded-top.center
       = "Wybrany promotor:"
       = current_user.choice.teacher.full_name
-  %div.user-fields
+  %p.padded-top.center
     - @result.each do |row|
       - row.map do |k, v|
-        %div.strong-text
+        %p.strong-text.center
           = "#{k}"
         %ul.no-bullets
           - v.each do |name|

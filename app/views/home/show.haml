@@ -1,2 +1,13 @@
-%h1.center
+%h2.center
   = I18n.t(:hello_you, email: current_user.email)
+%div.bordered.centered.half-width
+  %p.padded-top.center
+    = "aby edytować swoje dane przejdź do zakładki Moje Konto"
+    %br
+    = "możesz tam edytować swój email i zmienić hasło."
+  %p.padded.center
+    = "aby wybrać dziedziny i wyszukać promotorów, którzy się nimi zajmują,"
+    %br
+    = "przejdź do zakładki Moje Dziedziny"
+  %p.padded-bottom.center
+    = "Aby zobaczyć wyniki wyszukania przejdź do zakładki Promotorzy"

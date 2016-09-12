@@ -10,6 +10,29 @@ h3 {
   font-weight: bold;
 }
 
-h1.center {
+.center {
   text-align: center
+}
+
+.bordered {
+  background-color: #F8F8F8;
+  font: #777787;
+  border: 1px solid #E7E7E7;
+  border-radius: 10px;
+}
+
+.centered {
+  margin: auto;
+}
+
+p.padded-top {
+  padding-top: 10px;
+}
+
+p.padded-bottom {
+  padding-bottom: 10px;
+}
+
+.half-width {
+  width: 50%;
 }
