@@ -30,6 +30,9 @@ gem 'haml'
 gem 'bootstrap-sass', '~> 3.2.0'
 gem 'autoprefixer-rails'
 gem 'select2-rails'
+
+gem "administrate", "~> 0.2.2"
+gem "bourbon"
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
