@@ -7,8 +7,11 @@ pl:
             field:
               taken: została już wybrana
     models:
-      user: Użytkownik
-      field: Dziedzina
+      user: Student
+      field: Dziedziny
+      teacher: Wykładowcy
+      choice: Decyzje
+      taxonomy: Taksonomia
       personfield: Dziedzina
     attributes:
       user:
@@ -16,20 +19,54 @@ pl:
         password: Hasło
         password_confirmation: Potwierdzenie hasła
         current_password: Aktualne hasło
+  add: Dodaj
   back: Wróć
   cancel_account: Anuluj rejestrację
+  choice: Wybór
   current_password_explanation: (potrzebujemy aktualnego hasła, żeby zatwierdzić zmiany)
 
   fail: Coś poszło nie tak
+  field: Dziedzina
+  first_name: Imię
+  full_name: Imię i nazwisko
   hello_you: Witaj, %{email}
+  helpers:
+    label:
+      choice:
+        user: Student
+        teacher: Promotor
+      field:
+        parent_name: Dziedzina nadrzędna
+        taxonomy_name: Kategoria
+        name: Nazwa
+      teacher:
+        full_name: Imię i nazwisko
+        email: Email
+      user:
+        fields: dziedziny
+        choice: decyzja
+        full_name: Imię i nazwisko
+      person_field:
+        fieldable: Osoba
+        field: Dziedzina
+        score: ocena
+  last_name: Nazwisko
   leave_blank: (Pozostaw pole puste, jeśli nie chcesz zmieniać hasła)
   logout: Wyloguj
   my_account: Moje konto
   my_fields: Moje dziedziny
+  password: Hasło
+  person_field: Przypisane dziedziny
+  person_fields: Przypisane dziedziny
+  remember_me: Zapamiętaj mnie
   success: Dodano pomyślnie
+  taxonomy: Kategoria
+  teacher: Promotor
   teachers: Promotorzy
+  new_teacher: Dodaj promotora
   unhappy: Niezadowolony?
   update: Zatwierdź
+  user: Student
   you_sure: Jesteś pewien?
 
   devise:
