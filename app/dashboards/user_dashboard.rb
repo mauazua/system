@@ -19,15 +19,17 @@ class UserDashboard < Administrate::BaseDashboard
     last_sign_in_ip: Field::String,
     created_at: Field::DateTime,
     updated_at: Field::DateTime,
+    full_name: Field::String
   }.freeze
 
   COLLECTION_ATTRIBUTES = [
-    :fields,
+    :full_name,
+    :email,
     :choice,
-    :id,
   ].freeze
 
   SHOW_PAGE_ATTRIBUTES = [
+    :full_name,
     :fields,
     :choice,
     :email,

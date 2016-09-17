@@ -14,6 +14,8 @@ class TeacherDashboard < Administrate::BaseDashboard
     email: Field::String,
     first_name: Field::String,
     last_name: Field::String,
+    full_name: Field::String,
+
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -22,9 +24,7 @@ class TeacherDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
-    # :person_fields,
-    :fields,
-    :id,
+    :full_name,
     :email,
   ].freeze
 
@@ -43,7 +43,6 @@ class TeacherDashboard < Administrate::BaseDashboard
   # an array of attributes that will be displayed
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
-    # :person_fields,
     :fields,
     :email,
     :first_name,

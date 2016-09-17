@@ -13,6 +13,8 @@ class FieldDashboard < Administrate::BaseDashboard
     id: Field::Number,
     name: Field::String,
     parent_id: Field::Number,
+    parent_name: Field::String,
+    taxonomy_name: Field::String
   }.freeze
 
   # COLLECTION_ATTRIBUTES
@@ -21,10 +23,9 @@ class FieldDashboard < Administrate::BaseDashboard
   # By default, it's limited to four items to reduce clutter on index pages.
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
-    :parent,
-    :taxonomy,
-    :id,
     :name,
+    :parent_name,
+    :taxonomy_name
   ].freeze
 
   # SHOW_PAGE_ATTRIBUTES
@@ -32,9 +33,7 @@ class FieldDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = [
     :parent,
     :taxonomy,
-    # :id,
     :name,
-    # :parent_id,
   ].freeze
 
   # FORM_ATTRIBUTES
@@ -42,7 +41,6 @@ class FieldDashboard < Administrate::BaseDashboard
   # on the model's form (`new` and `edit`) pages.
   FORM_ATTRIBUTES = [
     :parent,
-    # :taxonomy,
     :name,
     :parent_id,
   ].freeze

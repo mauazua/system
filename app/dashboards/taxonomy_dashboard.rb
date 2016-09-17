@@ -23,8 +23,6 @@ class TaxonomyDashboard < Administrate::BaseDashboard
   # Feel free to add, remove, or rearrange items.
   COLLECTION_ATTRIBUTES = [
     :fields,
-    :root,
-    :id,
     :name,
   ].freeze
 
@@ -33,7 +31,6 @@ class TaxonomyDashboard < Administrate::BaseDashboard
   SHOW_PAGE_ATTRIBUTES = [
     :fields,
     :root,
-    :id,
     :name,
     :created_at,
     :updated_at,
