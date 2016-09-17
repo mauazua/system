@@ -11,13 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160907151927) do
+ActiveRecord::Schema.define(version: 20160917085809) do
 
   create_table "choices", force: :cascade do |t|
-    t.integer  "user_id"
-    t.integer  "teacher_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.integer "user_id"
+    t.integer "teacher_id"
   end
 
   add_index "choices", ["teacher_id"], name: "index_choices_on_teacher_id"
@@ -68,6 +66,8 @@ ActiveRecord::Schema.define(version: 20160907151927) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "first_name"
+    t.string   "last_name"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
