@@ -1,17 +1,21 @@
 %div.bordered.centered.half-width
-  - if current_user.choice
+  - if current_user.fields.any?
+    - if current_user.choice
+      %p.padded-top.center
+        = "Wybrany promotor:"
+        = current_user.choice.teacher.full_name
     %p.padded-top.center
-      = "Wybrany promotor:"
-      = current_user.choice.teacher.full_name
-  %p.padded-top.center
-    - @result.each do |row|
-      - row.map do |k, v|
-        %p.strong-text.center
-          = "#{k}"
-        %ul.no-bullets
-          - v.each do |name|
-            %li
-              - unless current_user.choice
-                = link_to name, choices_path(name: name), method: :post, data: { confirm: I18n.t(:you_sure) }
-              - else
-                = name
+      - @result.each do |row|
+        - row.map do |k, v|
+          %p.strong-text.center
+            = "#{k}"
+          %ul.no-bullets.center
+            - v.each do |name|
+              %li
+                - unless current_user.choice
+                  = link_to name, choices_path(name: name), method: :post, data: { confirm: I18n.t(:you_sure) }
+                - else
+                  = name
+  - else
+    %p.padded-top.center
+      = "Aby wyświetlona została lista promotorów do wyboru, musisz wybrać przynajmniej jedną dziedzinę"
