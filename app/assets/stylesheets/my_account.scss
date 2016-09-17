@@ -16,7 +16,11 @@ form.button_to {
 
 input {
   width: 50%;
+  padding: 5px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
 }
+
 p.unhappy {
   text-align: center;
 }
